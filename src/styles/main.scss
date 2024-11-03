@@ -1,0 +1,88 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'shows';
+@use 'faq';
+@use 'about';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+@mixin text($font-size: 14px) {
+    font-size: $font-size;
+    color: variaveis.$corDeTexto;
+}
+
+@mixin title($font-size: 35px) {
+    font-size: $font-size;
+    color: variaveis.$corDeTitulo;
+}
+
+.text--big {
+    @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px)
+    }
+}
+
+.text {
+    @include text();
+
+    @media (max-width: 768px) {
+        @include text(10px)
+    }
+}
+
+.text--small {
+    @include text(11.7px); 
+
+    @media (max-width: 768px) {
+        @include text(9.7px)
+    }
+}
+
+.title--big {
+    @include title(40px);
+
+    @media (max-width: 768px) {
+        @include title(32px)
+    }
+}
+
+.title {
+    @include title(); 
+
+    @media (max-width: 768px) {
+        @include title(30px)
+    }
+}
+
+.title--smal {
+    @include title(24px); 
+
+    @media (max-width: 768px) {
+        @include title(21px)
+    }
+}

@@ -1,0 +1,33 @@
+@use 'variaveis';
+
+.about {
+    padding: 5.6vw;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 768px) {
+        display: block;
+        text-align: center;
+    }
+
+    &__image {
+        max-width: 100%;
+        margin: 40px;
+    }
+
+    &__text {
+        margin-top: 40px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            max-width: 80%;
+
+            @media (max-width: 768px){
+                max-width: 100%;
+            }
+        }
+    }
+}

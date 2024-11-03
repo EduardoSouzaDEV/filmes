@@ -1,0 +1,60 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    background-image: url('../images/img_principal.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+
+    @media (max-width: 768px){
+        height: 80vh;
+        background-size: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.5;
+        z-index: 2;
+
+        @media (max-width: 768px){
+            height: 80vh;
+            background-size: cover;
+            display: none;
+        }
+    }
+
+    h1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        color: variaveis.$corDeTitulo;
+        z-index: 3;
+
+        @media (max-width: 768px){
+            margin-top: -100px;
+        }
+    }
+    
+    p {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        top: -20%;
+        font-size: 21px;
+        
+        @media (max-width: 768px){
+            font-size: 15px;
+        }
+    }
+}
